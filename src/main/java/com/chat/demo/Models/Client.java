@@ -19,11 +19,12 @@ public class Client extends Thread
     {
         this.Client_name = Client_name;
         Client_ID = Generate.generate_ID();
+        messages = new ArrayList<String>();
     }
 
     public void sendMessage(String messageID , Server server)
     {
-        server.addMessage(messageID);        
+        server.addMessage(messageID);      
     }
     
     @Override
@@ -39,9 +40,12 @@ public class Client extends Thread
             // Add user to the chatroom
             System.out.println("You are added to the room.");
             // Search in all of the messages
-            String messageID = messages.get(messages.size()-1);
+            String messageID = this.getMessages().get(messages.size()-1);
+            System.out.println("Message ID: " + messageID);
             sendMessage(messageID , server);
         }
+        else
+            System.out.println("Not Authorized");
         // If authorized then send the message to the chatroom
     }
 

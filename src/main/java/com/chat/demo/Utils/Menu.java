@@ -18,10 +18,11 @@ public class Menu
         {
             System.out.print("Enter Chatroom ID : ");
             String chatroomId = sc.next();
+            sc.nextLine();
             System.out.println("Enter Message");
             String msg = sc.nextLine();
             Data.MessageDB.add(new Message(ob.getClient_ID() , chatroomId , msg , new Date(0)));
-            ob.getMessages().add(msg);
+            ob.getMessages().add(msg);// I have to add the message ID
             ob.run();
         }
     }
@@ -29,6 +30,7 @@ public class Menu
     {
         System.out.println("1) New User\n2) Existing User\n3) Exit");
         int ch = sc.nextInt();
+        sc.nextLine();
         if(ch == 1)
         {
             System.out.print("Enter your name : ");

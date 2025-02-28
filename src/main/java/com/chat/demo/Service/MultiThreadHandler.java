@@ -9,9 +9,10 @@ public class MultiThreadHandler
     static Menu ob;
     public static void main(String[] args)
     {
+        ob = new Menu();
         Scanner sc = new Scanner(System.in);
-        ob.showMainMenu(sc);
-                
+        System.out.println("------------------------- Welcome to Baat Karo App --------------------");
+        ob.showMainMenu(sc);               
         
     }
     

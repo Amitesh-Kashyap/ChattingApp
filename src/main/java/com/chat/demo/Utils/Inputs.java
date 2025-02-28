@@ -15,7 +15,7 @@ public class Inputs
 
     public static boolean isAuthorized(String password)
     {
-        if(password == Key.SECRET_KEY)
+        if(password.equals(Key.SECRET_KEY))
             return true;
         return false;
     }

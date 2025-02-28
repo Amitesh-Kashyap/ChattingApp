@@ -1,0 +1,1 @@
+java -cp target/classes com.chat.demo.Service.MultiThreadHandler

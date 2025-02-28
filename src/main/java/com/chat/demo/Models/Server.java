@@ -12,9 +12,12 @@ public class Server
     private String ID;
     private ArrayList<Client> clients;
     private ArrayList<String> messages;
+
     public Server()
     {
         ID = Generate.generate_ID();
+        clients = new ArrayList<Client>();
+        messages = new ArrayList<String>();
     }
 
     public void addClient(Client ob)

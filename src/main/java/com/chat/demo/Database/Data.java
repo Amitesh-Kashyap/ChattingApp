@@ -6,6 +6,5 @@ import com.chat.demo.Models.Message;
 
 public class Data
 {
-    public static ArrayList<Message> MessageDB;
-    
+    public static ArrayList<Message> MessageDB = new ArrayList<Message>();    
 }
